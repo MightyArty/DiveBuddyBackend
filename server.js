@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const userRouter = require("./routes/users"); // login + register
 const appointmentRouter = require("./routes/appointments"); // schedule
 const messageRouter = require("./routes/messages"); // forum
+const diveRouter = require("./routes/dives"); // add dive
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 app.use("/api/users", userRouter);
 app.use("/api/appointments", appointmentRouter);
 app.use("/api/messages", messageRouter);
+app.use("/api/dives", diveRouter);
 
 // listen for requests
 mongoose
