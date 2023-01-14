@@ -32,6 +32,10 @@ const diveSchema = new Schema(
       type: mongoose.Types.ObjectId,
       ref: "User",
     },
+    state: {
+      type: String,
+      default: "Pending",
+    },
   },
   { timestamps: true }
 );

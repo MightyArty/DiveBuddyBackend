@@ -5,7 +5,7 @@ const getMessages = async (req, res) => {
   try {
     const messages = await Message.find({})
       .populate("user")
-      .sort({ createdAt: -1 });
+      .sort({ createdAt: +1 });
 
     res.status(200).json({ messg: "messages fetched successfuly", messages });
   } catch (error) {
