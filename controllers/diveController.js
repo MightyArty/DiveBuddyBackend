@@ -8,8 +8,10 @@ const getDives = async (req, res) => {
     const options = {};
 
     if (userId) {
-      options.userId = userId;
+      options.user = userId;
     }
+
+    console.log(userId);
 
     const dives = await Dive.find(options)
       .populate("user")
